@@ -10,19 +10,62 @@
       background-color: #fdfdfd;
       font-family: 'Segoe UI', sans-serif;
     }
+
     .hero {
       background-color: #f8b400;
       color: white;
       padding: 100px 0;
       text-align: center;
     }
+
     .section-title {
       margin-top: 60px;
       margin-bottom: 30px;
     }
-    .card img {
-      height: 200px;
+
+    /* Hover card style */
+    .card-hover {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .card-hover img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card-hover:hover img {
+      transform: scale(1.1);
+    }
+
+    .card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 20px;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+
+    .card-hover:hover .card-overlay {
+      transform: translateY(0);
+    }
+
+    .card-overlay h5 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card-overlay p {
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -58,69 +101,36 @@
 <section id="smoothies" class="container py-5">
   <h2 class="section-title text-center">Superfood Smoothies</h2>
   <div class="row g-4">
-    <!-- Example Smoothie -->
     <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://picsum.photos/seed/coco/400/200" class="card-img-top" alt="Coco Verde">
-        <div class="card-body">
-          <h5 class="card-title">Coco Verde</h5>
+      <div class="card h-100 card-hover">
+        <img src="images/coco-verde.jpg" alt="Coco Verde Smoothie">
+        <div class="card-overlay">
+          <h5>Coco Verde</h5>
           <p>kale, spinach, mango, banana, dates, coconut oil, coconut water</p>
         </div>
       </div>
     </div>
 
     <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://picsum.photos/seed/cb&j/400/200" class="card-img-top" alt="Bradley's CB&J">
-        <div class="card-body">
-          <h5 class="card-title">Bradley's CB&J</h5>
+      <div class="card h-100 card-hover">
+        <img src="images/cb-and-j.jpg" alt="Bradley's CB&J">
+        <div class="card-overlay">
+          <h5>Bradley's CB&J</h5>
           <p>strawberry, banana, cashew butter, dates, dragonfruit, house cashew milk</p>
         </div>
       </div>
     </div>
 
     <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://picsum.photos/seed/superman/400/200" class="card-img-top" alt="Superman">
-        <div class="card-body">
-          <h5 class="card-title">Superman</h5>
+      <div class="card h-100 card-hover">
+        <img src="images/superman.jpg" alt="Superman Smoothie">
+        <div class="card-overlay">
+          <h5>Superman</h5>
           <p>blueberries, goji berries, banana, dates, dragonfruit, house almond milk</p>
         </div>
       </div>
     </div>
-
-    <!-- Add more smoothies -->
-    <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://picsum.photos/seed/blaze/400/200" class="card-img-top" alt="The Blaze">
-        <div class="card-body">
-          <h5 class="card-title">The Blaze</h5>
-          <p>strawberry, mango, banana, dates, ginger, cayenne, house cashew milk</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://picsum.photos/seed/tropic/400/200" class="card-img-top" alt="Tropic Energy">
-        <div class="card-body">
-          <h5 class="card-title">Tropic Energy</h5>
-          <p>mango, banana, dates, dragonfruit, brewed guayusa</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://picsum.photos/seed/basil/400/200" class="card-img-top" alt="Basil Bomb">
-        <div class="card-body">
-          <h5 class="card-title">Basil Bomb</h5>
-          <p>strawberry, banana, basil, dates, house almond milk</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- More optional: Blended Brew, Cacao Monster, Kid Dynamite -->
+    <!-- Add more smoothies here following the same format -->
   </div>
 </section>
 
@@ -153,36 +163,34 @@
   <h2 class="section-title text-center">Acai Bowls & More</h2>
   <div class="row g-4">
     <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://picsum.photos/seed/acai/400/200" class="card-img-top" alt="Acai Bowl">
-        <div class="card-body">
-          <h5 class="card-title">Acai Smoothie Bowl</h5>
+      <div class="card h-100 card-hover">
+        <img src="images/acai-bowl.jpg" class="card-img-top" alt="Acai Bowl">
+        <div class="card-overlay">
+          <h5>Acai Smoothie Bowl</h5>
           <p>Pick any smoothie as the base. Topped with fruit and house granola.</p>
         </div>
       </div>
     </div>
 
     <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://picsum.photos/seed/oats/400/200" class="card-img-top" alt="Oats Bowl">
-        <div class="card-body">
-          <h5 class="card-title">Gluten-Free Oats Bowl</h5>
+      <div class="card h-100 card-hover">
+        <img src="images/oats-bowl.jpg" class="card-img-top" alt="Oats Bowl">
+        <div class="card-overlay">
+          <h5>Gluten-Free Oats Bowl</h5>
           <p>Oats soaked in house cashew milk, served cold with 2 toppings.</p>
         </div>
       </div>
     </div>
 
     <div class="col-md-4">
-      <div class="card h-100">
-        <img src="https://picsum.photos/seed/quinoa/400/200" class="card-img-top" alt="Quinoa Bowl">
-        <div class="card-body">
-          <h5 class="card-title">Quinoa Bowl</h5>
+      <div class="card h-100 card-hover">
+        <img src="images/quinoa-bowl.jpg" class="card-img-top" alt="Quinoa Bowl">
+        <div class="card-overlay">
+          <h5>Quinoa Bowl</h5>
           <p>Cold quinoa in cashew milk, with 2 toppings of your choice.</p>
         </div>
       </div>
     </div>
-
-    <!-- Add more: Combo Bowl, Vanilla Cashew Parfait, etc. -->
   </div>
 </section>
 
